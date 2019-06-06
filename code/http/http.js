@@ -18,3 +18,15 @@ http.createServer(function (request, response) {
 
 // 终端打印如下信息
 console.log('Server running at http://127.0.0.1:8888/');
+
+
+
+
+
+// 使用Express的代码来实现上面的功能
+
+var app = express();
+//...中间忽略
+http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
+});
